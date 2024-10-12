@@ -1,0 +1,18 @@
+
+<h1>Hola desde home</h1>
+<h2>{{user.userName}}</h2>
+<ul> <h2>{{user.userName}}</h2> <!-- Aquí se muestra el nombre de la publicación -->
+    <li>
+        <a href="/register" class="btn btn-outline-success">Usuario: {{user.userName}}</a>
+        <a href="/register" class="btn btn-outline-success">Usuario: {{user.telefono}}</a>
+    </li>
+</ul>
+
+{{> Forms}}
+<a href="/yolo">cargar publicaciones</a>
+<div class="publicaciones-container">
+   {{#each urls}} <!-- Suponiendo que 'publicaciones' es un arreglo -->
+    {{> Cards items=this}} <!-- Aquí se llama al componente 'Card' y se pasan los datos de la publicación -->
+{{/each}}
+
+</div>
